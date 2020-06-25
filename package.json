@@ -1,6 +1,15 @@
 {
   "name": "root",
   "private": true,
+  "scripts": {
+    "start:app1": "lerna run --scope \"@namespace/app1\" start",
+    "start:app2": "lerna run --scope \"@namespace/app1\" start",
+    "build:app1": "lerna run --scope \"@namespace/app1\" build",
+    "build:app2": "lerna run --scope \"@namespace/app2\" build",
+    "test:app1": "lerna run --scope \"@namespace/app1\" test",
+    "test:app2": "lerna run --scope \"@namespace/app2\" test",
+    "test": "npm run test:app1 && npm run test:app2"
+  },
   "devDependencies": {
     "lerna": "^3.22.1"
   }
